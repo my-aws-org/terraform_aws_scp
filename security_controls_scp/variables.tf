@@ -8,23 +8,23 @@ variable "region_lockdown" {
   description = "The AWS region(s) you want to restrict resources to."
   type        = list(string)
   default = [
-    "us-east-1",
+    "ap-southeast-1",
     "us-east-2",
     "us-west-1"
   ]
 }
 
-variable "ami_creator_account" {
-  description = "The AWS account ID that is responsible for creating and sharing EC2 AMIs."
-  type        = string
-}
+#variable "ami_creator_account" {
+#  description = "The AWS account ID that is responsible for creating and sharing EC2 AMIs."
+#  type        = string
+#}
 
-variable "ami_tag_key" {
-  description = "The Resource Tag Key to lockdown AMIs for ABAC."
-  type        = string
-}
+#variable "ami_tag_key" {
+#  description = "The Resource Tag Key to lockdown AMIs for ABAC."
+#  type        = string
+#}
 
-variable "ami_tag_value" {
-  description = "The Resource Tag Value to lockdown AMIs for ABAC."
-  type        = string
-}
+#variable "ami_tag_value" {
+#  description = "The Resource Tag Value to lockdown AMIs for ABAC."
+#  type        = string
+#}
