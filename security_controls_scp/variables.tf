@@ -4,10 +4,6 @@ variable "target_id" {
   type        = string
 }
 
-variable "region" {
-    default = ["ap-southeast-1"]
-}
-
 variable "region_lockdown" {
   description = "The AWS region(s) you want to restrict resources to."
   type        = list(string)
