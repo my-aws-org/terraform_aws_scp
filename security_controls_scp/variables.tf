@@ -4,7 +4,7 @@ variable "target_id" {
   type        = string
 }
 
-variable "aws_region" {
+variable "region" {
     default = ["ap-southeast-1"]
 }
 
