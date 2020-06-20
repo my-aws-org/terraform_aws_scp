@@ -1,5 +1,6 @@
 provider "aws" {
-  region = var.region
+    version = "~> 2.0"
+    region  = "us-east-1"
 }
 
 ## Deploy Account AWS Org SCPs
