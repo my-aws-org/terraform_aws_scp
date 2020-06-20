@@ -2,23 +2,25 @@ provider "aws" {
   region  = "ap-southeast-1"
 }
 
-resource "aws_organizations_policy" "ScpPolicy1" {
-  name = "scp_organizations"
+resource "aws_organizations_policy" "scp-leave-org" {
+#  name = "scp_organizations"
+  name = "scp-leave-org"
   description = "This SCP prevents users or roles in any affected account from leaving AWS Organizations, either directly as a command or through the console. "
-  content = <<POLICY
-{
-  "Version": "2012-10-17",
-  "Statement": [
-    {
-      "Action": [
-        "organizations:LeaveOrganization"
-      ],
-      "Resource": "*",
-      "Effect": "Deny"
-    }
-  ]
-}
-POLICY
+  content = jsondecode(file("${path.module}/scp-leave-org.json"))
+#  content = <<POLICY
+#{
+#  "Version": "2012-10-17",
+#  "Statement": [
+#    {
+#      "Action": [
+#        "organizations:LeaveOrganization"
+#      ],
+#      "Resource": "*",
+#      "Effect": "Deny"
+#    }
+#  ]
+#}
+#POLICY
 
 }
 
