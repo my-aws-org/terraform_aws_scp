@@ -6,7 +6,8 @@ resource "aws_organizations_policy" "scp-leave-org" {
 #  name = "scp_organizations"
   name = "scp-leave-org"
   description = "This SCP prevents users or roles in any affected account from leaving AWS Organizations, either directly as a command or through the console. "
-  content = jsondecode(file("${path.module}/scp-leave-org.json"))
+   content = jsondecode(file("scp-leave-org.json"))
+#  content = jsondecode(file("${path.module}/scp-leave-org.json"))
 #  content = <<POLICY
 #{
 #  "Version": "2012-10-17",
