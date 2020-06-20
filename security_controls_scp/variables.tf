@@ -9,7 +9,7 @@ variable "region_lockdown" {
   type        = list(string)
   default = [
     "ap-southeast-1",
-    "us-east-2",
+    "us-east-1",
     "us-west-1"
   ]
 }
